@@ -1,10 +1,8 @@
-node('test-slave') { 	
-	stages {
-		stage('Test_build'){
-			steps {
+node('test-slave') {
+		stage('Checkout'){
 				checkout scm
-				sh 'make'
-			      }
 		}
-	}		
+		stage('build'){
+				sh 'make'
+		}
 }
