@@ -1,5 +1,4 @@
-node { 	
-	agent { label 'test-slave' }
+node('test-slave') { 	
 	stages {
 		stage('Test_build'){
 			steps {
