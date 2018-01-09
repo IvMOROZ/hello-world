@@ -8,7 +8,7 @@ node('test-slave') {
 		}
 
 		stage ('Artifactory configuration'){
-				def server = Artifactory.newServer 'ART'
+				def server = Artifactory.newServer('ART')
 
 				// Read the upload spec which was downloaded from github.
 				def uploadSpec = readFile 'hello-world/upload.json'
@@ -16,7 +16,6 @@ node('test-slave') {
 				def buildInfo = server.upload spec: uploadSpec
 				buildInfo.env.capture = true
 		}
-
 
 		stage ('Publish build info'){
 				server.publishBuildInfo buildInfo
