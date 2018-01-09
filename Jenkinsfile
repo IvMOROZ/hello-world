@@ -9,17 +9,14 @@ node('test-slave') {
 
 		stage ('Artifactory configuration'){
 				def server = Artifactory.newServer 'ART'
-				def artifactoryMaven = Artifactory.newMavenBuild()
-				artifactoryMaven.tool = 'M3' // Tool name from Jenkins configuration
-				artifactoryMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
-				artifactoryMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
-				def buildInfo = Artifactory.newBuildInfo()
+
+				// Read the upload spec which was downloaded from github.
+				def uploadSpec = readFile 'hello-world/upload.json'
+				// Upload to Artifactory.
+				def buildInfo = server.upload spec: uploadSpec
 				buildInfo.env.capture = true
 		}
-		
-		stage ('Exec Maven'){
-				artifactoryMaven.run pom: 'maven-example/pom.xml', goals: 'clean install', buildInfo: buildInfo
-		}
+
 
 		stage ('Publish build info'){
 				server.publishBuildInfo buildInfo
