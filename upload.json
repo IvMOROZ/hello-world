@@ -1,10 +1,8 @@
 {
   "files": [
     {
-        "pattern": "hello-world/",
-        "target": "libs-snapshot-local",
-        "regexp": "true",
-        "excludePatterns": [".*.zip", "hello-world/props.*"]
+        "pattern": "/var/lib/jenkins/workspace/test_pipeline/hello",
+        "target": "libs-snapshot-local"
     }
   ]
 }
