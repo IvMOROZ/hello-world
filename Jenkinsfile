@@ -1,4 +1,4 @@
-node('test-slave') {
+node {
 		stage('Checkout'){
 				checkout scm
 		}
