@@ -1,8 +1,10 @@
 {
   "files": [
     {
-      "pattern": "hello-world/",
-      "target": "libs-snapshot-local/",
+        "pattern": "hello-world/",
+ -      "target": "libs-snapshot-local",
+ -      "regexp": "true",
+ -      "excludePatterns": [".*.zip", "hello-world/props.*"]
     }
   ]
 }
