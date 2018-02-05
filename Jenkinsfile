@@ -14,7 +14,6 @@ node {
 				def uploadSpec = readFile 'upload.json'
 				// Upload to Artifactory.
 				def buildInfo = Artifactory.newBuildInfo()
-				buildInfo = server.upload spec: uploadSpec
 				buildInfo.env.capture = true
 		}
 
