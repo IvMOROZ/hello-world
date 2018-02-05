@@ -13,7 +13,8 @@ node {
 				// Read the upload spec which was downloaded from github.
 				def uploadSpec = readFile 'upload.json'
 				// Upload to Artifactory.
-				def buildInfo = server.upload spec: uploadSpec
+				def buildInfo = Artifactory.newBuildInfo()
+				buildInfo = server.upload spec: uploadSpec
 				buildInfo.env.capture = true
 		}
 
