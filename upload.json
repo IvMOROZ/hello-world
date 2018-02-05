@@ -1,7 +1,7 @@
 {
   "files": [
     {
-        "pattern": "var/lib/jenkins/workspace/test_pipeline/hello",
+        "pattern": "var/lib/jenkins/workspace/test_pipeline/hello.o",
         "target": "local/"
     }
   ]
