@@ -8,8 +8,7 @@ node {
 		}
 
 		stage ('Artifactory configuration'){
-				def server = Artifactory.newServer url: 'http://localhost:8081/artifactory', credentialsId: 'test_user'
-
+				def server = Artifactory.server ART
 				// Read the upload spec which was downloaded from github.
 				def uploadSpec = readFile 'upload.json'
 				// Upload to Artifactory.
