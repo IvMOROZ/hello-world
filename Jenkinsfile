@@ -15,9 +15,8 @@ node {
 				// Upload to Artifactory.
    			 	def buildInfo = server.upload spec: uploadSpec
 				buildInfo.env.capture = true
-		}
-
-		stage ('Publish build info'){
 				server.publishBuildInfo buildInfo
 		}
+
+	
 }
