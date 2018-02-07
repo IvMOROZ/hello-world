@@ -2,7 +2,7 @@
   "files": [
     {
         "pattern": "README.md",
-        "target": "test_user/README.md"
+        "target": "test_pipeline/README.md"
     }
   ]
 }
