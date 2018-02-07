@@ -1,7 +1,7 @@
 {
   "files": [
     {
-        "pattern": "*.c",
+        "pattern": "*md",
         "target": "libs-snapshot-local"
     }
   ]
