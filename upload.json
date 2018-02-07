@@ -2,7 +2,7 @@
   "files": [
     {
         "pattern": "hello",
-        "target": "libs-snapshot-local/"
+        "target": " "
     }
   ]
 }
