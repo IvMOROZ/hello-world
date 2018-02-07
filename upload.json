@@ -1,7 +1,7 @@
 {
   "files": [
     {
-        "pattern": "111",
+        "pattern": "hello.o",
         "target": "libs-snapshot-local"
     }
   ]
