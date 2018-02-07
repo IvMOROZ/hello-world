@@ -1,7 +1,7 @@
 {
   "files": [
     {
-        "pattern": "*md",
+        "pattern": "README.md",
         "target": "libs-snapshot-local"
     }
   ]
