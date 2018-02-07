@@ -1,8 +1,8 @@
 {
   "files": [
     {
-        "pattern": "hello",
-        "target": "test_user/"
+        "pattern": "README.md",
+        "target": "test_user/README.md"
     }
   ]
 }
