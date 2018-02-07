@@ -1,8 +1,8 @@
 {
   "files": [
     {
-        "pattern": "test_pipeline",
-        "target": "local"
+        "pattern": "",
+        "target": "libs-snapshot-local"
     }
   ]
 }
