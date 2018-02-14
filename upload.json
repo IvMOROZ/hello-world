@@ -1,7 +1,7 @@
 {
   "files": [
     {
-        "pattern": "README.md",
+        "pattern": "hello",
         "target": "test_repo/"
     }
   ]
